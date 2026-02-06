@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe5e5;
+  }
+  .cute-photo {
+  max-width: 40%;         /* fits nicely on phone/computer */
+  height: auto;            /* keeps proportions */
+  border-radius: 0px;      /* soft rounded corners */
+  margin: 0px 0;           /* space around it */
+  box-shadow: 0 10px 25px #f4f7f8;  /* pretty shadow */
+  border: 4px solid white;  /* white frame vibe */
+}
+/* Floating Hearts */
+.hearts-container {
+  position: fixed;          /* stays on screen even when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;     /* lets you click buttons underneath */
+  overflow: hidden;
+  z-index: -1;              /* behind your content */
+}
+
+.heart {
+  position: absolute;
+  bottom: -10%;             /* start below screen */
+  font-size: 2rem;          /* adjust size: 1.5rem smaller, 3rem bigger */
+  opacity: 0;
+  animation: float-up linear infinite;
+  color: #ff4757;           /* pink-red, or change to #ff69b4 hot pink etc. */
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.8); /* soft glow */
+}
+
+/* Make each heart start at different times & positions */
+.heart:nth-child(1) { left: 10%; animation-duration: 12s; animation-delay: 0s; }
+.heart:nth-child(2) { left: 20%; animation-duration: 15s; animation-delay: 2s; }
+.heart:nth-child(3) { left: 30%; animation-duration: 10s; animation-delay: 1s; }
+.heart:nth-child(4) { left: 40%; animation-duration: 14s; animation-delay: 4s; }
+.heart:nth-child(5) { left: 50%; animation-duration: 13s; animation-delay: 3s; }
+.heart:nth-child(6) { left: 60%; animation-duration: 11s; animation-delay: 5s; }
+.heart:nth-child(7) { left: 70%; animation-duration: 16s; animation-delay: 0.5s; }
+.heart:nth-child(8) { left: 80%; animation-duration: 12s; animation-delay: 6s; }
+.heart:nth-child(9) { left: 15%; animation-duration: 18s; animation-delay: 7s; }
+.heart:nth-child(10){ left: 85%; animation-duration: 14s; animation-delay: 8s; }
+
+/* The floating animation */
+@keyframes float-up {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-120vh) translateX(30px) rotate(360deg); /* rise up, sway a bit */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150vh) translateX(-20px) rotate(-360deg);
+    opacity: 0;
+  }
+}
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: 20px;
+  }
+  
+  .container .tenor-gif-embed {
+    max-width: 200px;
+  }
+  
+  .container .btn {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .btn a {
+    text-decoration: none;
+    color: #111;
+    background: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
+  }
+  background-image:url('https://ibb.co/Lzrx8jYN')  
+    background-position:center
+    background-size:cover  
+    background-repeat:no-repeat
+    height
+    width    
+    display:flex
+    justify-content:center
+    align-items:center
+   flex-direction :column>
+  …
+    font-family :sans-serif>
+      …
+        text-align :center>
+          …
+            feConvolveMatrix>
+              …
+                font-size 
+    padding
+    color
+    text-shadow
+
+.container{ 
+    background:rgba(0,0,0,0.6);
+    padding:30px;   
+    border-radius:15px;
+    box-shadow:0.5rem 1rem 3rem hsl(0,0%,0%,0.5);
+}
+.btn        
+    a{
+      text-decoration:none;
+      color:#111;
+      background:#fff;
+      padding:10px 25px;
+      border-radius:8px;
+      box-shadow:0.5rem 1rem 3rem hsl(0,0%,0%,0.3);
+    }   
